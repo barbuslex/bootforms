@@ -17,7 +17,7 @@ class BasicFormBuilder
 
 	protected function formGroup($label, $name, $control)
 	{
-		$label = $this->builder->label($label, $name)->addClass('control-label')->forId($name);
+		$label = $this->builder->label($label)->addClass('control-label')->forId($name);
 		$control->id($name)->addClass('form-control');
 
 		$formGroup = new FormGroup($label, $control);
@@ -76,7 +76,7 @@ class BasicFormBuilder
 
 	protected function buildCheckGroup($label, $name, $control)
 	{
-		$label = $this->builder->label($label, $name)->after($control)->addClass('control-label');
+		$label = $this->builder->label($label)->after($control)->addClass('control-label');
 
 		$checkGroup = new CheckGroup($label);
 
@@ -145,7 +145,7 @@ class BasicFormBuilder
 	public function file($label, $name, $value = null)
 	{
 		$control = $this->builder->file($name)->value($value);
-		$label = $this->builder->label($label, $name)->addClass('control-label')->forId($name);
+		$label = $this->builder->label($label)->addClass('control-label')->forId($name);
 		$control->id($name);
 
 		$formGroup = new FormGroup($label, $control);

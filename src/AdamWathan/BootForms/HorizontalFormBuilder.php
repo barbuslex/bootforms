@@ -39,7 +39,7 @@ class HorizontalFormBuilder extends BasicFormBuilder
 
 	protected function formGroup($label, $name, $control)
 	{
-		$label = $this->builder->label($label, $name)
+		$label = $this->builder->label($label)
 		->addClass($this->getLabelClass())
 		->addClass('control-label')
 		->forId($name);
@@ -77,7 +77,7 @@ class HorizontalFormBuilder extends BasicFormBuilder
 
 	protected function checkGroup($label, $name, $control)
 	{
-		$label = $this->builder->label($label, $name)->after($control);
+		$label = $this->builder->label($label)->after($control);
 
 		$checkGroup = new CheckGroup($label);
 
@@ -104,7 +104,7 @@ class HorizontalFormBuilder extends BasicFormBuilder
 	public function file($label, $name, $value = null)
 	{
 		$control = $this->builder->file($name)->value($value);
-		$label = $this->builder->label($label, $name)
+		$label = $this->builder->label($label)
 			->addClass($this->getLabelClass())
 			->addClass('control-label')
 			->forId($name);
