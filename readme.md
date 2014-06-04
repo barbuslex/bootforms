@@ -1,6 +1,12 @@
 BootForms
 ===============
 
+Based on adamwathan/bootforms with bugfix and Laravel 4 normalization :
+Use :
+    {{ BootForm::text(name, value) }}
+Insted Of:
+    {{ BootForm::text(value, name) }}
+
 BootForms builds on top of my more general [Form](https://github.com/adamwathan/form) package by adding another layer of abstraction to rapidly generate markup for standard Bootstrap 3 forms. Probably not perfect for your super custom branded ready-for-release apps, but a *huge* time saver when you are still in the prototyping stage!
 
 ## Installing with Composer
@@ -10,7 +16,7 @@ You can install this package via Composer by including the following in your `co
 ```json
 {
     "require": {
-        "adamwathan/bootforms": "v0.2"
+        "barbuslex/bootforms": "1.*"
     }
 }
 ```
@@ -128,11 +134,11 @@ BootForms makes a few decisions for you and allows you to pare it down a bit mor
 
 ```php
 {{ BootForm::open() }}
-	{{ BootForm::text('First Name', 'first_name') }}
-	{{ BootForm::text('Last Name', 'last_name') }}
-	{{ BootForm::text('Date of Birth', 'date_of_birth') }}
-	{{ BootForm::email('Email', 'email') }}
-	{{ BootForm::password('Password', 'password') }}
+	{{ BootForm::text('first_name', 'First Name') }}
+	{{ BootForm::text('last_name', 'Last Name') }}
+	{{ BootForm::text('date_of_birth', 'Date of Birth') }}
+	{{ BootForm::email('email', 'Email') }}
+	{{ BootForm::password('password', 'Password') }}
 	{{ BootForm::submit('Submit') }}
 {{ BootForm::close() }}
 ```
@@ -170,11 +176,11 @@ $labelWidth = 2;
 $controlWidth = 10;
 
 {{ BootForm::openHorizontal($labelWidth, $controlWidth) }}
-  {{ BootForm::text('First Name', 'first_name') }}
-  {{ BootForm::text('Last Name', 'last_name') }}
-  {{ BootForm::text('Date of Birth', 'date_of_birth') }}
-  {{ BootForm::email('Email', 'email') }}
-  {{ BootForm::password('Password', 'password') }}
+  {{ BootForm::text('first_name', 'First Name') }}
+  {{ BootForm::text('last_name', 'Last Name') }}
+  {{ BootForm::text('date_of_birth', 'Date of Birth') }}
+  {{ BootForm::email('email', 'Email') }}
+  {{ BootForm::password('password', 'Password') }}
   {{ BootForm::submit('Submit') }}
 {{ BootForm::close() }}
 ```
