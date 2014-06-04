@@ -200,7 +200,7 @@ If you need to customize your form elements in any way (such as adding a default
 //    <label class="control_label" for="first_name">First Name</label>
 //    <input type="text" class="form-control" id="first_name" placeholder="John Doe">
 // </div>
-BootForm::text('First Name', 'first_name')->placeholder('John Doe');
+BootForm::text('first_name', 'First Name')->placeholder('John Doe');
 ```
 
 For more information about what's possible, check out the documentation for [my basic Form package.](https://github.com/adamwathan/form)
