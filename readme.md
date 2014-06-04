@@ -54,7 +54,7 @@ Add the `BootForm` facade to the `aliases` array in `app/config/app.php`:
 You can now start using BootForms by calling methods directly on the `BootForm` facade:
 
 ```php
-BootForm::text('Email', 'email');
+BootForm::text('email', 'Email');
 ```
 
 ### Outside of Laravel 4
