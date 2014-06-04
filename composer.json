@@ -21,6 +21,5 @@
             "AdamWathan\\BootForms": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "version": "1.0"
+    "minimum-stability": "dev"
 }
