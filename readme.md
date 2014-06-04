@@ -2,10 +2,16 @@ BootForms
 ===============
 
 Based on adamwathan/bootforms with bugfix and Laravel 4 normalization :
+
 Use :
-    {{ BootForm::text(name, value) }}
+```php
+{{ BootForm::text(name, value) }}
+```
+
 Insted Of:
-    {{ BootForm::text(value, name) }}
+```php
+{{ BootForm::text(value, name) }}
+```
 
 BootForms builds on top of my more general [Form](https://github.com/adamwathan/form) package by adding another layer of abstraction to rapidly generate markup for standard Bootstrap 3 forms. Probably not perfect for your super custom branded ready-for-release apps, but a *huge* time saver when you are still in the prototyping stage!
 
@@ -16,7 +22,7 @@ You can install this package via Composer by including the following in your `co
 ```json
 {
     "require": {
-        "barbuslex/bootforms": "1.*"
+        "barbuslex/bootforms": "v0.2"
     }
 }
 ```
