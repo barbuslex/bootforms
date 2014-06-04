@@ -37,7 +37,7 @@ class HorizontalFormBuilder extends BasicFormBuilder
 		return $this->builder->open()->addClass('form-horizontal');
 	}
 
-	protected function formGroup($label, $name, $control)
+	protected function formGroup($name, $label, $control)
 	{
 		$label = $this->builder->label($label)
 		->addClass($this->getLabelClass())
@@ -67,15 +67,15 @@ class HorizontalFormBuilder extends BasicFormBuilder
 		return new OffsetFormGroup($button, $this->controlWidth);
 	}
 
-	public function checkbox($label, $name)
+	public function checkbox($name, $label)
 	{
 		$control = $this->builder->checkbox($name);
-		$checkGroup = $this->checkGroup($label, $name, $control)->addClass('checkbox');
+		$checkGroup = $this->checkGroup($name, $label, $control)->addClass('checkbox');
 
 		return new OffsetFormGroup($checkGroup, $this->controlWidth);
 	}
 
-	protected function checkGroup($label, $name, $control)
+	protected function checkGroup($name, $label, $control)
 	{
 		$label = $this->builder->label($label)->after($control);
 
@@ -89,19 +89,19 @@ class HorizontalFormBuilder extends BasicFormBuilder
 		return $checkGroup;
 	}
 
-	public function radio($label, $name, $value = null)
+	public function radio($name, $label, $value = null)
 	{
 		if (is_null($value)) {
 			$value = $label;
 		}
 
 		$control = $this->builder->radio($name, $value);
-		$checkGroup = $this->checkGroup($label, $name, $control)->addClass('radio');
+		$checkGroup = $this->checkGroup($name, $label, $control)->addClass('radio');
 
 		return new OffsetFormGroup($checkGroup, $this->controlWidth);
 	}
 
-	public function file($label, $name, $value = null)
+	public function file($name, $label, $value = null)
 	{
 		$control = $this->builder->file($name)->value($value);
 		$label = $this->builder->label($label)
