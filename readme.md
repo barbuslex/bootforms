@@ -22,7 +22,7 @@ You can install this package via Composer by including the following in your `co
 ```json
 {
     "require": {
-        "barbuslex/bootforms": "v0.2"
+        "barbuslex/bootforms": "dev-master"
     }
 }
 ```
